@@ -1,0 +1,16 @@
+footer {
+    width: 100%;
+    background: $darkColor;
+    padding: 10px;
+    display: block;
+
+    p {
+        text-align: center;
+        color: $backgroundColor;
+        font-size: 12px;
+
+        span {
+            color: $secondaryColor;
+        }
+    }
+}

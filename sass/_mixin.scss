@@ -1,0 +1,9 @@
+@mixin btn ($color: $thirdColor, $btnBg: $primaryColor){
+    color: $color;
+    background: $btnBg;
+    padding: 10px 8px;
+    width: 90px;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+}

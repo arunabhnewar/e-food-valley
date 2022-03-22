@@ -1,0 +1,36 @@
+.food_container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+    .category_card {
+        flex-basis: 350px;
+        flex: 1;
+        margin: 30px 25px;
+        border-radius: 4px;
+        box-shadow: 0 0 20px rgb(8, 8, 153);
+
+        h3 {
+            color: $secondaryColor;
+            font-size: 22px;
+            padding: 10px 15px;
+        }
+
+        .category_img {
+            text-align: center;
+        }
+
+        .category_bottom {
+            display: flex;
+            justify-content: space-around;
+            border: 1px solid #0000;
+            padding: 10px;
+            background: $backgroundColor;
+
+            button {
+                padding: 8px 12px;
+                @include btn();
+            }
+        }
+    }
+}

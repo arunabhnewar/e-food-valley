@@ -1,0 +1,44 @@
+.search_field {
+    margin: 25px auto;
+    h1{
+        text-align: center;
+        font-size: 40px;
+        color: $primaryColor;
+    }
+    p {
+        text-align: center;
+        font-size: 22px;
+        color: $thirdColor;
+    }
+
+    .search_box {
+        margin: 15px auto;
+        text-align: center;
+        max-width: 600px;
+        display: flex;
+        background: $primaryColor;
+
+        .common {
+            padding: 10px 8px;
+        }
+
+        input {
+            @extend .common;
+            flex: 1;
+        }
+
+        button {
+            @extend .common;
+            @include btn();
+        }
+    }
+
+    @media #{$mobile} {
+        h1 {
+            font-size: 30px;
+        }
+        p {
+            font-size: 14px;
+        }
+    }
+}

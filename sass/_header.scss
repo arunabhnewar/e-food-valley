@@ -1,0 +1,110 @@
+header {
+    background: $primaryColor;
+    width: 100%;
+
+    .inner_header {
+        .logo {
+            a {
+                text-decoration: none;
+                color: $thirdColor;
+                font-size: 24px;
+                font-weight: 600;
+            }
+        }
+
+        height: 50px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @media #{$mobile} {
+           position: relative;
+        }
+
+        #navbar {
+            @media #{$mobile} {
+                display: block;
+                position: absolute;
+                width: 100%;
+                top: 50px;
+                left: 0;
+                padding: 15px;
+                background: $backgroundColor;
+                color: $secondaryColor;
+
+                ul {
+                    display: block;
+
+                    li {
+                        background: #000;
+                        margin: 5px 0;
+                        padding: 5px 10px;
+
+                        a {
+                            display: block;
+                            width: 100%;
+                        }
+                    }
+                }
+            
+                transition: transform .9s ease-in-out;
+               transform: scaleY(0);
+               transform-origin: top;
+            }
+        }
+    }
+}
+
+.menu_toggle {
+    display: none;
+    span {
+        cursor: pointer;
+        color: $backgroundColor;
+        font-weight: 600;
+    }
+    @media #{$mobile} {
+        display: block;
+    }
+}
+
+.show {
+    transform: scaleY(1) !important;
+}
+
+
+#banner_section {
+    background-image: linear-gradient(rgba(43, 41, 41, 0.5), rgba(41, 40, 40, 0.5)), url('./../assets/lunch-box.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 50vh;
+    margin-top: 20px;
+    background-position: left top;
+
+.banner_content{
+    padding-top: 130px;
+    h1 {
+        color: $textColor;
+        font-size: 42px;
+        font-weight: 700;
+        span {
+            color: $secondaryColor;
+        }
+        @media #{$mobile} {
+            font-size: 32px;
+        }
+
+    }
+    h3 {
+        color: $thirdColor;
+        font-weight: 500;
+        font-size: 28px;
+
+        span {
+            color: $secondaryColor;
+        }
+        @media #{$mobile} {
+            font-size: 18px;
+        }
+    }
+}
+
+}
