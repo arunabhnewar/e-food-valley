@@ -17,14 +17,21 @@
     width: 100%;
     min-height: 450px;
 
+    h2 {
+        color: $textColor;
+        text-align: center;
+    }
+
     .close {
-       padding: 7px;
+    //    padding: 7px;
        border: 0;
        outline: 0;
-       border-radius: 50%;
+       height: 25px;
+       width: 25px;
+       border-radius: 25px;
        position: fixed;
-       right: -2%;
-       top: -4%;
+       right: -3%;
+       top: -3%;
        cursor: pointer;
        background: $primaryColor;
        color: $whiteColor;
