@@ -1,0 +1,33 @@
+.thanks_givingSection {
+    text-align: center;
+}
+
+.thanks_givingSection img{
+    max-width: 400px;
+    max-height: 400px;
+    img {
+        width: 100%;
+    }
+}
+
+.back_button{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+   
+    button {
+        background: $thirdColor;
+        border: $textColor;
+        margin: 0 25px 30px 0;
+        padding: 8px 25px;
+        border-radius: 5px;
+        font-size: 18px;
+        cursor: pointer;
+
+        a{
+            text-decoration: none;
+            color: $textColor;
+        }
+    }
+
+}

@@ -178,4 +178,4 @@ function getTotalItems() {
     totalItems.innerHTML = itemsArray.length;
 }
 
-getTotalItems()
+getTotalItems();
