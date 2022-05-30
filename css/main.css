@@ -59,7 +59,7 @@ header {
 }
 
 header .inner_header {
-  height: 50px;
+  height: 40px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -136,6 +136,41 @@ header .inner_header .logo a {
 .show {
   -webkit-transform: scaleY(1) !important;
           transform: scaleY(1) !important;
+}
+
+.cart_area {
+  position: relative;
+}
+
+.cart_area .total_items {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: #fff;
+  top: -1px;
+  right: -8px;
+  color: #e67e22;
+}
+
+.cart_area span {
+  padding-top: 5px;
+  color: #e67e22;
+}
+
+.cart {
+  background: unset;
+  cursor: pointer;
+  border: 0;
 }
 
 #banner_section {
@@ -250,8 +285,8 @@ header .inner_header .logo a {
 }
 
 .food_container .category_card {
-  -ms-flex-preferred-size: 350px;
-      flex-basis: 350px;
+  -ms-flex-preferred-size: 400px;
+      flex-basis: 400px;
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
@@ -264,11 +299,25 @@ header .inner_header .logo a {
 .food_container .category_card h3 {
   color: #e67e22;
   font-size: 22px;
-  padding: 10px 15px;
+  padding: 0 15px;
+}
+
+.food_container .category_card p {
+  color: #e67e22;
+  padding: 0 0 15px 15px;
 }
 
 .food_container .category_card .category_img {
+  width: 250px;
+  height: 250px;
+  margin: 10px auto;
   text-align: center;
+}
+
+.food_container .category_card .category_img img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
 }
 
 .food_container .category_card .category_bottom {
@@ -319,6 +368,11 @@ header .inner_header .logo a {
   text-align: center;
 }
 
+.inner_modal p {
+  color: #2c3e50;
+  text-align: center;
+}
+
 .inner_modal .close {
   border: 0;
   outline: 0;
@@ -331,6 +385,140 @@ header .inner_header .logo a {
   cursor: pointer;
   background: #2c3e50;
   color: #fff;
+}
+
+.modal_content {
+  text-align: center;
+  padding: 20px 15px;
+}
+
+.modal_content .category_details .food_img {
+  width: 250px;
+  height: 250px;
+  margin: 0px auto;
+}
+
+.modal_content .category_details .food_img img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.cart_page {
+  margin: 0px auto;
+  max-width: 1080px;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.cart_page .cart_table {
+  width: 100%;
+  text-align: center;
+  border-collapse: collapse;
+}
+
+.cart_page .cart_table thead {
+  background: #2c3e50;
+  color: #d7dfe2;
+}
+
+.cart_page tr, .cart_page th:first-child {
+  width: 45%;
+}
+
+.cart_page td, .cart_page th {
+  border: 1px solid #dddddd;
+  padding: 8px;
+}
+
+.cart_page #cart_items tr td input {
+  width: 70px;
+  height: 30px;
+  text-align: center;
+  background: #dddddd;
+  font-size: 16px;
+  font-weight: 600;
+  border: 0;
+  outline: 0;
+  border-radius: 4px;
+}
+
+#increment, #decrement {
+  width: 25px;
+  height: 25px;
+  border-radius: 4px;
+  border: 0;
+  background: #dddddd;
+  cursor: pointer;
+  margin: 0px 5px;
+}
+
+#increment i, #decrement i {
+  font-size: 12px;
+}
+
+.total_price, table {
+  width: 413px;
+  margin-left: auto;
+  border-top: 1px solid #d7dfe2;
+}
+
+.Purchase_btn {
+  margin-top: 60px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.Purchase_btn button {
+  background: #09be54;
+  color: #d7dfe2;
+  border: #d7dfe2;
+  padding: 8px 25px;
+  border-radius: 5px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+#removeItem i {
+  font-size: 18px;
+  font-weight: 600;
+  opacity: 0.5;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+#removeItem i:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+
+#Quantity {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 footer {

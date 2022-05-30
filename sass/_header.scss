@@ -12,10 +12,11 @@ header {
             }
         }
 
-        height: 50px;
+        height: 40px;
         display: flex;
         justify-content: space-between;
         align-items: center;
+
         @media #{$mobile} {
            position: relative;
         }
@@ -56,6 +57,7 @@ header {
 
 .menu_toggle {
     display: none;
+
     span {
         cursor: pointer;
         color: $backgroundColor;
@@ -70,6 +72,35 @@ header {
     transform: scaleY(1) !important;
 }
 
+.cart_area {
+    position: relative;
+
+    .total_items{
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        background: $whiteColor;
+        top: -1px;
+        right: -8px;
+        color: $secondaryColor;
+    }
+
+    span{
+        padding-top: 5px;
+        color: $secondaryColor;
+    }
+}
+
+
+.cart {
+    background: unset;
+    cursor: pointer;
+    border: 0;
+}
 
 #banner_section {
     background-image: linear-gradient(rgba(43, 41, 41, 0.5), rgba(41, 40, 40, 0.5)), url('./../assets/lunch-box.jpg');

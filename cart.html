@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-----custom css link------>
+    <link rel="stylesheet" href="./css/main.css">
+
+    <!-----custom icons---->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+
+    <!-----font awesome icons------>
+    <script src="https://kit.fontawesome.com/4fa42c0453.js" crossorigin="anonymous"></script>
+
+    <!------script js------>
+    <script src="./js/cart.js" defer></script>
+
+    <title>Cart | RedStore</title>
+</head>
+
+<body>
+
+    <!-----header start------>
+    <header id="header">
+        <div class="container inner_header">
+
+            <!-------logo------>
+            <div class="logo">
+                <a href="#">E-Food Valley</a>
+            </div>
+
+            <!-------navigation menu-------->
+            <nav id="navbar">
+                <ul>
+                    <li class="nav_link">
+                        <a href="#">Home</a>
+                    </li>
+                    <li class="nav_link">
+                        <a href="#">Products</a>
+                    </li>
+                    <li class="nav_link">
+                        <a href="#">Pricing</a>
+                    </li>
+                    <li class="nav_link">
+                        <a href="./cart.html">
+                            <div class="cart_area">
+                                <button class="cart">
+                                    <div class="total_items">
+                                    </div>
+                                    <span class="material-icons-outlined">
+                                        shopping_cart
+                                    </span>
+                                </button>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="menu_toggle">
+                <span class="material-icons-outlined">
+                    menu
+                </span>
+            </div>
+        </div>
+
+        <!-----banner start------>
+        <div id="banner_section">
+            <div class="container banner_content">
+                <h1>E <span>Food</span> Valley</h1>
+                <h3>A Healthy <span>Food</span>, For A Wealthy <span>Mood</span></h3>
+            </div>
+
+        </div>
+    </header>
+    <!-----header end-------->
+
+    <!-----main start-------->
+    <main>
+
+        <!-----cart page start------>
+        <div class="cart_page">
+            <table class="cart_table">
+                <thead>
+                    <tr>
+                        <th>Product</th>
+                        <th>Quantity</th>
+                        <th>Price</th>
+                        <th>Remove</th>
+                    </tr>
+                </thead>
+                <tbody id="cart_items">
+                    <!-- <tr>
+                        <td>Chicken</td>
+                        <td id="Quantity">
+                            <button id="increment">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                            <input value="10" type="text" readonly />
+
+                            <button id="decrement">
+                                <i class="fas fa-minus"></i>
+                            </button>
+                        </td>
+
+                        <td><span>200 Taka</span></td>
+
+                        <td id="removeItem"><i id="remove" class="fas fa-times"></i></td>
+                    </tr>
+
+                    <tr>
+                        <td>Beef</td>
+                        <td id="Quantity">
+                            <button id="increment">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                            <input value="10" type="text" readonly />
+
+                            <button id="decrement">
+                                <i class="fas fa-minus"></i>
+                            </button>
+                        </td>
+
+                        <td><span>200 Taka</span></td>
+
+                        <td id="removeItem"><i id="remove" class="fas fa-times"></i></td>
+
+                    </tr> -->
+                </tbody>
+            </table>
+
+            <div class="total_price" id="total_price">
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>Subtotal: </td>
+                            <td id="subTotal">250</td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+            <div class="Purchase_btn">
+                <button id="checkout">Checkout</button>
+            </div>
+        </div>
+        <!-----cart page end------>
+
+    </main>
+
+</body>
+
+</html>

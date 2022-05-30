@@ -4,7 +4,7 @@
     flex-wrap: wrap;
 
     .category_card {
-        flex-basis: 350px;
+        flex-basis: 400px;
         flex: 1;
         margin: 30px 25px;
         border-radius: 4px;
@@ -13,11 +13,25 @@
         h3 {
             color: $secondaryColor;
             font-size: 22px;
-            padding: 10px 15px;
+            padding: 0 15px;
+        }
+
+        p {
+            color: $secondaryColor;
+            padding: 0 0 15px 15px;
         }
 
         .category_img {
+            width: 250px;
+            height: 250px;
+            margin: 10px auto;
             text-align: center;
+
+            img {
+                width: 100%;
+                height: 100%;
+                border-radius: 50%;
+            }
         }
 
         .category_bottom {

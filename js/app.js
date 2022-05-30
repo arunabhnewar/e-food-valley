@@ -1,3 +1,5 @@
+
+
 // Element select function
 function $(selector) {
     return document.querySelector(selector);
@@ -25,31 +27,18 @@ function close() {
 }
 close();
 
-
-// Open Modal function
 function modalOpen() {
     modal.style.display = 'block';
 }
-
 
 toggler.onclick = function () {
     nav.classList.toggle('show');
 }
 
-
 // Menu toggle event
 $(".menu_toggle").addEventListener('click', function (e) {
     nav.classList.toggle("show");
 })
-
-
-
-//cleaner function
-const cleanUp = () => {
-    error.textContent = "";
-    input.value = "";
-    modalContent.textContent = "";
-};
 
 
 
@@ -59,6 +48,7 @@ let categories;
 
 async function getCategories() {
     const response = await fetch('./../resources/categories.json');
+
     const data = await response.json();
     categories = data.categories;
     showCategories();
@@ -90,7 +80,6 @@ function showCategories() {
 }
 
 
-
 // Show details on UI
 function getDetails(id) {
     modalOpen();
@@ -109,7 +98,6 @@ function getDetails(id) {
 
 
 
-// Filtered Food category show on UI
 async function getCategory(catName) {
     console.log(catName);
 
@@ -124,11 +112,11 @@ async function getCategory(catName) {
             div.className = 'category_card';
             div.innerHTML = `
                     <div class="category_img">
-                    <img src="${strMealThumb}" alt="" /></div>
+                    <img style="width:350px" src="${strMealThumb}" alt="" /></div>
                     <h3>Price: ${price} TK.</h3>
-                    <p>Name: ${strMeal.slice(0, 25)}</p>
+                    <p style="margin:5px 15px">Name: ${strMeal.slice(0, 20)}</p>
                     <div class="category_bottom">
-                    <button id="seeBtn" onclick="addToCart('${idMeal}')">Add to cart</button>
+                    <button id="seeBtn" onclick="addToCart('${idMeal}')">Add to card</button>
                     </div>`;
 
             display.appendChild(div);
@@ -137,7 +125,7 @@ async function getCategory(catName) {
 }
 
 
-// get data in local storage
+
 function getCartFromLocalStorage() {
     let cart = {};
     const data = localStorage.getItem('cart');
@@ -149,7 +137,6 @@ function getCartFromLocalStorage() {
 }
 
 
-// Add to cart data on local storage
 function addToCart(id) {
     const cart = getCartFromLocalStorage();
     const itemsArray = Object.keys(cart);
@@ -168,14 +155,3 @@ function addToCart(id) {
     localStorage.setItem('cart', JSON.stringify(cart))
 }
 
-
-// get cart data from local storage
-function getTotalItems() {
-    const cart = getCartFromLocalStorage();
-    const itemsArray = Object.keys(cart);
-    const totalItems = document.querySelector('.total_items');
-
-    totalItems.innerHTML = itemsArray.length;
-}
-
-getTotalItems()
